@@ -5,51 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JD Groups</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <style>
-      h1 {
-        font-size: 40px;
-        font-family: sandybrown;
-        font-weight: normal;
-        color: rgb(50, 50, 50);
-        text-align: center;
-      }
-
-      #banner {
+      #banner{
         width: 100%;
-        height: 300px;
-        object-fit: cover;
+        height: 250px
       }
-
-      h2 {
-        font-family: sans-serif;
-        font-size: 32px;
-        color: rgb(100, 100, 100);
-        text-align: center;
-      }
-
-      .bodytext {
-        font-family: sans-serif;
-        color: rgb(80, 80, 80);
-      }
-
-      #container{
-        max-width: 720px;
-        margin: 0 auto;
-      }
- 
     </style>
   </head>
   <body>
-    <div id="container">
-      <h1>JD Group Careers</h1>
-      <img id="banner" src="static/banner.png">
-      <h2>About JD Groups</h2>
-      <p class="bodytext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel risus id erat pharetra cursus. Nullam fringilla eleifend pharetra. Fusce arcu lorem, vulputate non libero varius, volutpat lacinia turpis. Aliquam dolor augue, sollicitudin ornare malesuada non, finibus consequat neque. Etiam sit amet finibus risus. Nulla velit est, sagittis in malesuada eu, ornare sed turpis. Nullam ut tristique dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec sit amet justo sit amet est commodo blandit. Curabitur at neque vel turpis tempus rhoncus nec ac justo. Maecenas malesuada ut ipsum lobortis dignissim.</p>
-      <h2>Open Positions</h2>
-      <p class="bodytext">Job Showings</p>
-      <div style=text-align:center>
-        <button id="cotactButton"> Contact Us </button>
-        <p> copyright 2024 @JD</p>
+    <div class="container">
+      <h1 class="text-center mt-2 mb-4">JD Group Careers</h1>
+      <img class="img-fluid" id="banner" src="static/banner.png">
+      <h2 class="text-center mt-2 mb-4">About JD Groups</h2>
+      <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel risus id erat pharetra cursus. Nullam fringilla eleifend pharetra. Fusce arcu lorem, vulputate non libero varius, volutpat lacinia turpis. Aliquam dolor augue, sollicitudin ornare malesuada non, finibus consequat neque. Etiam sit amet finibus risus. Nulla velit est, sagittis in malesuada eu, ornare sed turpis. Nullam ut tristique dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec sit amet justo sit amet est commodo blandit. Curabitur at neque vel turpis tempus rhoncus nec ac justo. Maecenas malesuada ut ipsum lobortis dignissim.</p>
+      <h2 class="text-center mt-2 mb-4"> Open Positions </h2>
+      <div>
+        {% for job in jobs %}
+          {% include 'jobitem.html' %}
+        {% endfor %}
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary btn-lg mt-2"> Contact Us </button>
+        <p class="mt-4"> copyright 2024 @JD</p>
       </div>  
     </div>
   </body>
