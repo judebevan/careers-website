@@ -14,11 +14,17 @@
     </style>
   </head>
   <body>
+    {% include 'navbar.html' %}
     <div class="container">
       <h1 class="text-center mt-2 mb-4">JD Group Careers</h1>
       <img class="img-fluid" id="banner" src="static/banner.png">
       <h2 class="text-center mt-2 mb-4">About JD Groups</h2>
-      <p class="lead">JD Groups is a new breed of digital experts, providing consultation and qualified professionals. We work with businesses across the world — helping put together fractional teams of engineering and marketing talent that have proven a range of expertise in multiple industries.</p>
+      <div class="row mb-2">
+        <p class="lead col-8">
+          JD Groups is a new breed of digital experts, providing consultation and qualified professionals. We work with businesses across the world — helping put together fractional teams of engineering and marketing talent that have proven a range of expertise in multiple industries.
+        </p>
+        <img class="col-4" src="/static/people.jpg">
+      </div>
       <h2 class="text-center mt-2 mb-4"> Job Opennings </h2>
       <div>
         {% for job in jobs %}
@@ -26,8 +32,8 @@
         {% endfor %}
       </div>
       <div class="text-center">
-        <button class="btn btn-primary btn-lg mt-2"> Contact Us </button>
-        <p class="mt-4"> copyright 2024 @JD</p>
+        <a href=" mailto:judebevan2002@gmail.com?subject=Question%20about%20job%20openings&body=My%20Name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AJob%20Title%3A%20%3Cjob%20name%3E " class="btn btn-primary btn-lg mt-2"> Contact Us </a>
+        <p class="mt-4"> copyright 2024 JD Groups inc. </p>
       </div>  
     </div>
   </body>
