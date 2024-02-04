@@ -1,2 +1,2 @@
-# careers_website
+# careers-website
 A careers website for Techies
